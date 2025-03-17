@@ -2,6 +2,14 @@ class Pessoa(var nome: String, var anoNascimento: String) {
     var abc: String? = null;
     var doc: String? = null;
 
+    init {
+        val parsedAnoNascimento = Integer.parseInt(anoNascimento);
+
+        if (parsedAnoNascimento < 2007) {
+            throw Exception("Menor de idade!")
+        }
+    }
+
     constructor(nome: String, anoNascimento: String, doc: String):  this(nome, anoNascimento) {
         if (doc == "") {
             throw IllegalArgumentException("Documento não informado!");
