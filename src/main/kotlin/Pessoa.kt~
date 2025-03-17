@@ -5,7 +5,7 @@ class Pessoa(var nome: String, var anoNascimento: String) {
     init {
         val parsedAnoNascimento = Integer.parseInt(anoNascimento);
 
-        if (parsedAnoNascimento > 2007) {
+        if (parsedAnoNascimento < 2007) {
             throw Exception("Menor de idade!")
         }
     }
