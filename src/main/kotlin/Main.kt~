@@ -26,6 +26,8 @@ fun main() {
         println(abc);
     }
 
+
+
     var getterSetterJava = GetterSetterJava();
     getterSetterJava.id = 1;
     println(getterSetterJava.id)
