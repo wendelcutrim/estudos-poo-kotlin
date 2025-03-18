@@ -1,4 +1,5 @@
 import br.com.estudospookotlin.GetterSetterJava
+import sealed.Result
 
 /*fun calculaBonus(cargo: String): Float {
     when (cargo) {
@@ -15,6 +16,8 @@ fun calculaBonus(cargo: Cargo): Float {
         else -> return 2000F
     }
 }
+
+//class TentandoHerdarClasseSealedDeOutroPacote: Result() {} // Não será possível pois Result é uma classe sealed e ela só pode ser herdada dentro do seu própio pacote e aqui estmos fora do pacote sealed
 
 fun main() {
     var pessoa: Pessoa = Pessoa("Wendel", "1998");
