@@ -19,6 +19,25 @@ open class Visibilidade {
     protected fun teste() {
         println("Teste")
     }
+
+    // Nested class (interna)
+    private class NestedClass() {
+    // Classes nested não tem acessos aos atributos da classe externa. Porém a classe externa, tem acesso aos atributos da classe interna
+        var id: Int = 0;
+        fun test() {
+            println("NestedClass");
+        }
+    }
+
+    fun printNestedClassTest() {
+        println(NestedClass().id)
+    }
+
+    private inner class NestedInnerClass() {
+        fun printNomeClasseExterna() {
+            println(_nome);
+        }
+    }
 }
 
 fun main() {
