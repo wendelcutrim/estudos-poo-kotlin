@@ -1,3 +1,8 @@
+interface Selvagem {
+    fun atacar(): String;
+
+}
+
 abstract class Mamifero(var nome: String) {
     abstract fun falar(): String
 
@@ -8,9 +13,13 @@ abstract class Mamifero(var nome: String) {
     fun dormir() {}
 }
 
-class Cachorro(nome: String): Mamifero(nome) {
+class Cachorro(nome: String): Mamifero(nome), Selvagem {
     override fun falar(): String {
         return "Au au";
+    }
+
+    override fun atacar(): String {
+        return "${this.nome} está atacando!";
     }
 }
 
